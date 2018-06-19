@@ -27,16 +27,23 @@ server.route({
 
 const init = async () => {
 
-    await server.register(require('inert'));
-
-    server.route({
-        method: 'GET',
-        path: '/hello',
-        handler: (request, h) => {
-
-            return h.file('./public/hello.html');
+    await server.register({
+        plugin: require('hapi-pino'),
+        options: {
+            prettyPrint: true,
+            logEvents: ['response']
         }
     });
+
+    //await server.register(require('inert'));
+    // server.route({
+    //     method: 'GET',
+    //     path: '/hello',
+    //     handler: (request, h) => {
+
+    //         return h.file('./public/hello.html');
+    //     }
+    // });
 
     await server.start();
     console.log(`Server running at: ${server.info.uri}`);
