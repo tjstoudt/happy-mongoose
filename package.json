@@ -1,0 +1,23 @@
+{
+  "name": "happy-mongoose",
+  "version": "1.0.0",
+  "description": "Testing Hapi & Mongoose functionality",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjstoudt/happy-mongoose.git"
+  },
+  "author": "tjstoudt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tjstoudt/happy-mongoose/issues"
+  },
+  "homepage": "https://github.com/tjstoudt/happy-mongoose#readme",
+  "dependencies": {
+    "hapi": "^17.5.1",
+    "inert": "^5.1.0"
+  }
+}
